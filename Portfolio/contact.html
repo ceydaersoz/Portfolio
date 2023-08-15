@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::selection {
+            background-color: rgba(140, 219, 255, 0.256);
+            /* Seçilen metin arka plan rengi */
+        }
+
+        body {
+            background-color: rgb(229, 229, 229);
+            max-height: 100vh;
+        }
+
+        /* NAVBAR START */
+
+        header{
+            height: 10vh;
+        }
+
+        .social-media {
+            display: flex;
+        }
+
+        .social-media-list {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .social-media-list li {
+            list-style-type: none;
+            color: #222;
+            padding: 10px;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .social-media-list li a:hover {
+            color: #222222d4;
+            text-decoration: line-through;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-list-items {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar-list-item {
+            padding: 0px 20px;
+            color: #222;
+            font-size: 18px;
+        }
+
+        .navbar-list-item a{
+            text-decoration: none;
+            color: #222;
+        }
+
+        .navbar-list-item:hover a{
+            color: #1ea2c3;
+        }
+
+        /* NAVBAR END */
+
+        /* MAIN START */
+
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+
+        .contact-section {
+            max-width: 500px;
+            height: 80vh;
+            margin-left: 200px;
+            padding-top: 70px;
+
+        }
+
+        .contact-title {
+            font-size: 175px;
+            position: relative;
+        }
+
+        .dot {
+            position: absolute;
+            bottom: -4px;
+            left: 450px;
+            font-size: 175px;
+            animation: bounce 0.5s infinite 0.25s;
+            /* Nokta animasyonunun gecikmeli başlaması */
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+
+        .contact-section p {
+            font-size: 14px;
+        }
+
+        .contact-text {
+            padding-bottom: 10px;
+        }
+
+        .form {
+            border: 1px solid #22222249;
+            border-radius: 50px;
+            height: 500px;
+            width: 500px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-first-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .form-item-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item-name input {
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border: 1px solid #22222249;
+            background-color: rgb(229, 229, 229);
+            text-indent: 10px
+        }
+
+        .form-item-email {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item-email input {
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border: 1px solid #22222249;
+            background-color: rgb(229, 229, 229);
+            text-indent: 10px
+        }
+
+        .form-second-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .form-item-phone {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item-phone input {
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border: 1px solid #22222249;
+            background-color: rgb(229, 229, 229);
+            
+        }
+
+        .form-item-phone input::placeholder {
+            padding-left: 10px;
+        }
+
+        .form-item-subject {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item-subject select {
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border: 1px solid #22222249;
+            background-color: rgb(229, 229, 229);
+        }
+
+        .form-item-subject input::selection {
+            padding-left: 20px;
+            color: #22222249;
+        }
+
+
+        .form-item-message {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .form-item-message textarea {
+            width: 430px;
+            height: 200px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #22222249;
+            background-color: rgb(229, 229, 229);
+            text-indent: 10px;
+        }
+
+        .form-item-message textarea::placeholder {
+            padding-left: 20px;
+            padding-top: 10px;
+            color: #22222249;
+        }
+
+        .btn-send {
+            width: 100px;
+            margin-top: 10px;
+            border: 1px solid #22222249;
+            color: #222;
+        }
+
+        .btn-send:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        /* MAIN END */
+
+        /* FOOTER START */
+
+        .footer-p {
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-p p {
+            font-size: 12px;
+        }
+
+        /* FOOTER END */
+
+        /* RESPONSIVE */
+
+        @media screen and (max-width:1300px) {
+            .contact-section{
+                margin-left: 20px;
+                max-height: 400px;
+            }
+
+            .form{
+                margin-left: 20px;
+                
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .social-media{
+                order: 2;
+            }          
+
+            .navbar-list{
+                order: 1;
+            }
+
+            .navbar{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:520px) {
+            .dot{
+                animation: none;
+                position: unset;
+            }
+
+            .contact-title{
+                font-size: 100px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .navbar-list li{
+                padding: 5px;
+            }
+
+            .form{
+                max-width: 400px;
+                height: 700px;
+            }
+
+            .form-first-section{
+                display: block;
+            }
+
+            .form-second-section{
+                display: block;
+            }
+
+            .form-item-message textarea{
+                width: 200px;
+                height: 200px;
+            }
+
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<header>
+    <nav class="navbar">
+            <div class="social-media">
+                <ul class="social-media-list">
+                    <li><a href="#">GH</a></li>
+                    <li><a href="#">TW</a></li>
+                    <li><a href="#">LI</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-list">
+                <ul class="navbar-list-items">
+                    <li class="navbar-list-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-list-item"><a href="about.html">About</a></li>
+                    <li class="navbar-list-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="navbar-list-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+
+    </nav>
+</header>  
+
+<body>
+    <main class="main-section">
+        <div class="contact-section">
+            <h2 class="contact-title">Hello<span class="dot">.</span></h2>
+            <p class="contact-text">Have questions or need assistance? We're here to help. Feel free to get in touch
+                with us using the information below:</p>
+            <p><b>Email:</b> ceydaersoz9@gmail.com</p>
+            <p><b>Phone:</b> (123) 456-7890</p>
+            <p><b>Address:</b> Ankara, TURKIYE</p>
+        </div>
+
+        <div class="form">
+            <div class="form-first-section">
+                <div class="form-item-name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Full Name">
+                </div>
+
+                <div class="form-item-email">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" placeholder="contact@you.com">
+                </div>
+            </div>
+
+            <div class="form-second-section">
+                <div class="form-item-phone">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="(123) 456 - 7890">
+                </div>
+
+                <div class="form-item-subject">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject">
+                        <option value="0" selected disabled>Select</option>
+                        <option value="1">Information Request</option>
+                        <option value="2">Website Development</option>
+                        <option value="3">Design Services</option>
+                        <option value="4">Portfolio Evaluation</option>
+                        <option value="5">Suggestions and Feedback</option>
+                        <option value="6">Recruitment Request</option>
+
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-item-message">
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="Please write your message..."></textarea>
+            </div>
+
+
+            <button class="btn-send" type="submit">Send</button>
+
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-p">
+            <p>©2023 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

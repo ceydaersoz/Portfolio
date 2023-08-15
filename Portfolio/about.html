@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background-color: rgba(140, 219, 255, 0.256);
+            /* Seçilen metin arka plan rengi */
+        }
+
+        body {
+            background-color: rgb(229, 229, 229);
+            max-height: 100vh;
+        }
+
+        /* NAVBAR START */
+
+        header{
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-media {
+
+        }
+
+        .social-media-list {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .social-media-list li {
+            list-style-type: none;
+            color: #222;
+            padding: 10px;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .social-media-list li a:hover {
+            color: #222222d4;
+            text-decoration: line-through;
+        }
+
+        .navbar-section {
+            background-color: rgb(229, 229, 229);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+
+        }
+
+        .navbar-list-items {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar-list-item {
+            padding: 0px 20px;
+            color: #222;
+            font-size: 18px;
+        }
+
+        .navbar-list-item a{
+            text-decoration: none;
+            color: #222;
+        }
+
+        .navbar-list-item:hover a{
+            color: #1ea2c3;
+            
+        }
+
+        /* NAVBAR END */
+
+        /* MAIN START */
+
+        .section-about {
+            display: flex;
+        }
+
+        .about {
+            max-width: 700px;
+            margin: 50px 0 50px 200px;
+            text-align: justify;
+        }
+
+        .about-title {
+            font-size: 130px;
+            margin: 50px 0px 10px 0px;
+        }
+
+
+        .about .p2,
+        .p3,
+        .p4,
+        .p5,
+        .p6,
+        .p7,
+        .p8,
+        .p9,
+        .p11 {
+            padding-bottom: 1.5em;
+            font-size: 17px;
+        }
+
+        .about .p10 {
+            padding-bottom: 0em;
+        }
+
+        .p1 {
+            padding-bottom: 1.5em;
+            font-size: 30px;
+            text-indent: 10px;
+            line-height: 2.5rem;
+        }
+
+        .p1,
+        .p10,
+        .p11 {
+            font-style: italic;
+        }
+
+        .photo {
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 350px;
+            height: 467px;
+        }
+
+        .photo img {
+            width: 350px;
+            height: 467px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        }
+
+        /*
+        .btn-cv{
+            margin-top: 50px;
+            width: 250px;
+            height: 60px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 200;
+            text-shadow: 1px 1px #d8d8d85a;
+            color: #eee;
+        }
+
+        .btn-cv:hover{
+            background-color: #282828;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        } */
+
+        .buttons {
+            display: flex;
+            gap: 40px;
+        }
+
+        .button-cv {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-cv:after {
+            content: "";
+            border-radius: 20px;
+            background-color: #ffe44c39;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        .button-cv:hover:after {
+            top: 0px;
+            left: 0px;
+        }
+
+        @media (min-width: 768px) {
+            .button-cv {
+                padding: 13px 50px 13px;
+            }
+        }
+
+        .button-contact {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-contact:after {
+            content: "";
+            border-radius: 20px;
+            background-color: #ffe44c39;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        .button-contact:hover:after {
+            top: 0px;
+            left: 0px;
+        }
+
+        @media (min-width: 768px) {
+            .button-52 {
+                padding: 13px 50px 13px;
+            }
+        }
+
+        /*
+        .btn-contact{
+            margin-top: 50px;
+            width: 250px;
+            height: 60px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 200;
+            text-shadow: 1px 1px #d8d8d85a;
+            color: #eee;
+        }
+
+        .btn-contact:hover{
+            background-color: #282828;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        */
+
+        /* MAIN END */
+
+        /* FOOTER START */
+        .footer-p {
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-p p {
+            font-size: 12px;
+        }
+
+        /* FOOTER END */
+
+         /* RESPONSIVE */
+
+         @media screen and (max-width:1400px) {
+            .about{
+                margin-left: 20px;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .photo{
+                order: 1;
+            }
+            .about{
+                order: 2;
+                margin-left: 0px;
+            }
+            .section-about{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .photo{
+                margin: 0;
+                scale: 0.6;
+            }
+
+            .about{
+                margin: 0px 20px;
+            }
+
+            .about-title{
+                margin: 0;
+            }
+
+        }
+
+        @media screen and (max-width:576px) {
+            .navbar{
+                display: flex;
+                flex-direction: column;
+            }
+            .social-media{
+                order: 2;
+            }
+
+            .social-media{
+                order: 2;
+            }
+
+            .navbar-list{
+                order: 1;
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .about-title{
+                font-size: 100px;
+            }
+
+            .navbar-list li{
+                padding: 5px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="social-media">
+                <ul class="social-media-list">
+                    <li><a href="#">GH</a></li>
+                    <li><a href="#">TW</a></li>
+                    <li><a href="#">LI</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-list">
+                <ul class="navbar-list-items">
+                    <li class="navbar-list-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-list-item"><a href="about.html">About</a></li>
+                    <li class="navbar-list-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="navbar-list-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main>
+        <div class="section-about">
+
+            <div class="about">
+                <h2 class="about-title">About.</h2>
+                <p class="p1">"Let me introduce myself through the various facets that make up my unique identity."</p>
+
+                <p class="p2">I took my first step into the world of professional exploration in 2016 when I proudly
+                    graduated from Hacettepe University's Nutrition and Dietetics program. Since then, my journey has
+                    been one of compassion and guidance, as I've dedicated myself to the noble field of dietetics. As a
+                    <span style="background-color: #6dd53d3f;">dietitian,</span> I've had the privilege of assisting
+                    individuals in making healthier choices and embracing balanced lifestyles. With every interaction,
+                    my commitment to their well-being grows stronger, and their successes become my own.</p>
+
+                <p class="p3">The dawn of my fascination with <span
+                        style="background-color: #0033ff4f;">programming</span> brought a new chapter to my story. I
+                    embarked on this digital odyssey, diving into the intricacies of HTML, CSS, JavaScript, Python,
+                    React, jQuery, and Bootstrap. What started as curiosity soon became a passion. Coding became a
+                    language of innovation, allowing me to shape ideas into tangible digital solutions. The more I
+                    learned, the more I yearned to learn further. Each challenge and achievement fueled my dedication to
+                    continuous growth, inspiring me to remain open to new knowledge and emerging technologies.</p>
+
+                <p class="p4">Beyond my screen and code, I am an ardent <span
+                        style="background-color: #f8ff3745;">animal lover.</span> Their innocence and loyalty resonate
+                    deeply with me, shaping my commitment to advocating for their well-being. The simple joy of being in
+                    the presence of animals uplifts my spirit and reminds me of the importance of compassion in our
+                    world.</p>
+
+                <p class="p5"><span style="background-color: #ff84003b;">Sports</span> are another realm that captures
+                    my heart. From the swift elegance of tennis to the team synergy in basketball, the adrenaline rush
+                    of Formula 1 to the precision of dart throwing – I'm an enthusiast of diverse athletic pursuits.
+                    Following these sports is not just a hobby; it's a source of inspiration that teaches me about
+                    discipline, resilience, and the pursuit of excellence.</p>
+
+                <p class="p6">My love for creativity finds its expression in <span
+                        style="background-color: #ff00fb3c;">painting.</span> Through vibrant strokes, I convey emotions
+                    and stories that words often fail to capture. This artistic outlet is my sanctuary, where I can
+                    freely explore my imagination and connect with the world in a unique way.</p>
+
+                <p class="p7">When it's time to unwind, the world of <span
+                        style="background-color: #bb00ff39;">gaming</span> beckons. Both as a player and an observer, I
+                    immerse myself in the realm of video and tabletop games. The strategic thinking and immersive
+                    storytelling of these games captivate my mind and provide a dynamic balance to my endeavors.</p>
+
+                <p class="p8">In summary, my journey is an intricate fusion of nutrition expertise, coding prowess,
+                    animal advocacy, sports passion, artistic expression, and gaming fascination. These facets converge
+                    to create a rich mosaic that defines my identity. As I navigate this path, I am resolute in my
+                    determination to further excel in the world of programming, constantly evolving my skills, and
+                    embracing the challenges and triumphs that lie ahead.</p>
+
+                <p class="p9">Thank you for joining me on this journey of exploration and growth.</p>
+
+                <p class="p10">Warm regards,</p>
+                <p class="p11">Ceyda Ersöz</p>
+
+
+
+
+                <h4>Skills</h4>
+                <p>HTML | CSS | SASS-SCSS | JAVASCRIPT | BOOTSTRAP | REACT JS | PYTHON | DJANGO</p>
+
+                <div class="buttons">
+                    <button class="button-cv" role="button">My CV</button>
+                    <button class="button-contact" role="button">Contact Me</button>
+                </div>
+            </div>
+
+            <div class="photo">
+                <img src="Image/me2.jpg" alt="">
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-p">
+            <p>©2023 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

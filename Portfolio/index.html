@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::selection {
+            background-color: rgba(140, 219, 255, 0.256);
+            /* Seçilen metin arka plan rengi */
+        }
+
+
+        body {
+            background-color: rgb(229, 229, 229);
+            max-height: 100vh;
+        }
+
+        /* NAVBAR START */
+
+        .social-media {
+            display: flex;
+        }
+
+        .social-media-list {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .social-media-list li {
+            list-style-type: none;
+            color: #222;
+            padding: 10px;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .social-media-list li a:hover {
+            color: #222222d4;
+            text-decoration: line-through;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-list-items {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar-list-item {
+            padding: 0px 20px;
+            color: #222;
+            font-size: 18px;
+        }
+
+        .navbar-list-item a{
+            text-decoration: none;
+            color: #222;
+        }
+
+        .navbar-list-item:hover a{
+            color: #1ea2c3;
+            
+        }
+
+        /* NAVBAR END */
+
+
+        /* MAIN START */
+
+        .name {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name>p:first-child {
+            font-size: 70px;
+            letter-spacing: 10px;
+        }
+
+        .name>p:last-child {
+            font-size: 25px;
+            letter-spacing: 2px;
+
+        }
+
+        .shapes {
+            position: relative;
+        }
+
+        .shape1 {
+            height: 150px;
+            position: absolute;
+            bottom: 200px;
+            left: 5px;
+        }
+
+        .shape2 {
+            height: 100px;
+            position: absolute;
+            bottom: 150px;
+            right: 60px;
+        }
+
+        .shape3 {
+            height: 100px;
+            position: absolute;
+            bottom: 30px;
+            right: 200px;
+        }
+
+        .shape4 {
+            height: 150px;
+            position: absolute;
+            bottom: -50px;
+            right: 5px;
+            transform: rotate(180deg);
+
+        }
+
+        .shape5 {
+            height: 80px;
+            position: absolute;
+            bottom: 90px;
+            left: 100px;
+        }
+
+        .shape6 {
+            height: 100px;
+            position: absolute;
+            bottom: -30px;
+            left: 20px;
+        }
+
+        /* MAIN END */
+
+        /* FOOTER START */
+
+        .footer-p {
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .footer-p p {
+            font-size: 12px;
+        }
+
+        /* FOOTER END */
+
+
+
+        /* RESPONSIVE */
+
+        @media screen and (max-width:788px) {
+
+            .name>p:first-child {
+                font-size: 40px;
+            }
+
+            .name>p:last-child {
+                font-size: 20px;
+                padding-bottom: 200px;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+
+            .name>p:first-child {
+                font-size: 40px;
+            }
+
+            .name>p:last-child {
+                font-size: 20px;
+                padding-bottom: 200px;
+            }
+
+            .navbar{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .social-media{
+                order: 2;
+            }          
+            
+            .social-media li{
+                font-size: 16px;
+            }
+
+            .navbar-list{
+                order: 1;
+            }
+
+            .shape2, .shape3, .shape4{
+                scale: 0.5;
+            }
+
+            .shape1{
+                scale: 0.5;
+            }
+            .shape5{
+                scale: 0.5;
+
+            }
+            .shape6{
+                scale: 0.5;
+            }
+            }
+
+            @media screen and (max-width:450px) {
+            
+            .name>p:first-child {
+                text-align: center;
+            }
+
+            .name>p:last-child {
+                padding-bottom: 200px;
+                text-align: center;
+            }
+
+            .navbar-list li{
+                padding: 5px;
+            }
+
+            }
+        
+            @media screen and (max-width:310px) {
+
+            .navbar-list li{
+                font-size: 16px;
+            }
+
+            .social-media li{
+                font-size: 14px;
+            }
+
+            }
+
+    </style>
+
+
+
+
+</head>
+
+
+<header>
+    <nav class="navbar">
+            <div class="social-media">
+                <ul class="social-media-list">
+                    <li><a href="#">GH</a></li>
+                    <li><a href="#">TW</a></li>
+                    <li><a href="#">LI</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-list">
+                <ul class="navbar-list-items">
+                    <li class="navbar-list-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-list-item"><a href="about.html">About</a></li>
+                    <li class="navbar-list-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="navbar-list-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+
+    </nav>
+
+</header>  
+
+<body>
+    <main>
+        <div class="name">
+            <p>CEYDA ERSÖZ</p>
+            <p>FREELANCE WEB DEVELOPER</p>
+        </div>
+
+        <div class="shapes">
+            <img class="shape1" src="Image/shape1.png" alt="">
+            <img class="shape2" src="Image/shape2.png" alt="">
+            <img class="shape3" src="Image/shape3.png" alt="">
+            <img class="shape4" src="Image/shape4.webp" alt="">
+            <img class="shape5" src="Image/shape5.webp" alt="">
+            <img class="shape6" src="Image/shape6.webp" alt="">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-p">
+            <p>©2023 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>

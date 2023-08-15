@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::selection {
+            background-color: rgba(140, 219, 255, 0.256);
+            /* Seçilen metin arka plan rengi */
+        }
+
+        body {
+            background-color: rgb(229, 229, 229);
+        }
+
+         /* NAVBAR START */
+
+         .social-media {
+            display: flex;
+        }
+
+        .social-media-list {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .social-media-list li {
+            list-style-type: none;
+            color: #222;
+            padding: 10px;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .social-media-list li a:hover {
+            color: #222222d4;
+            text-decoration: line-through;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-list-items {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar-list-item {
+            padding: 0px 20px;
+            color: #222;
+            font-size: 18px;
+        }
+
+        .navbar-list-item a{
+            text-decoration: none;
+            color: #222;
+        }
+
+        .navbar-list-item:hover a{
+            color: #1ea2c3;
+            
+        }
+
+        /* NAVBAR END */
+
+
+        .main-title {
+            font-size: 100px;
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+
+        .container {
+            margin: 50px 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .container div {
+            border-radius: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            width: 400px;
+            height: 260px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            transition: transform 0.3s ease
+        }
+
+        .container img {
+            width: 400px;
+            height: 260px;
+        }
+
+        .container div:hover {
+            transform: scale(1.2);
+        }
+
+
+        .footer-p {
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-p p {
+            font-size: 12px;
+        }
+
+        .social-media {
+            display: flex;
+        }
+
+        .social-media-list {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .social-media-list li {
+            list-style-type: none;
+            color: #222;
+            padding: 10px;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .social-media-list li a:hover {
+            color: #222222d4;
+            text-decoration: line-through;
+        }
+
+         /* RESPONSIVE */
+
+         @media screen and (max-width:850px) {
+            .main-title{
+                margin-left: auto;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .main-title{
+                font-size: 80px;
+            }
+
+            .social-media{
+                order: 2;
+            }          
+
+            .navbar-list{
+                order: 1;
+            }
+
+            .navbar{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .main-title{
+                font-size: 50px;
+            }
+
+            .navbar-list li{
+                padding: 5px;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<header>
+    <nav class="navbar">
+            <div class="social-media">
+                <ul class="social-media-list">
+                    <li><a href="#">GH</a></li>
+                    <li><a href="#">TW</a></li>
+                    <li><a href="#">LI</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-list">
+                <ul class="navbar-list-items">
+                    <li class="navbar-list-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-list-item"><a href="about.html">About</a></li>
+                    <li class="navbar-list-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="navbar-list-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+
+    </nav>
+
+</header>  
+
+<body>
+    <main>
+        <h2 class="main-title">Portfolio.</h2>
+
+        <div class="container">
+            <div class="template1">
+                <a href="#"><img src="Image/homepage8.jpg" alt=""></a>
+                <div class="overlay"></div>
+            </div>
+            <div class="template2">
+                <a href="#"><img src="Image/homepage7.jpg" alt=""></a>
+            </div>
+            <div class="template3">
+                <a href="#"><img src="Image/homepage6.jpg" alt=""></a>
+            </div>
+            <div class="template4">
+                <a href="#"><img src="Image/homepage5.jpg" alt=""></a>
+            </div>
+            <div class="template5">
+                <a href="#"><img src="Image/homepage4.jpg" alt=""></a>
+            </div>
+            <div class="template6">
+                <a href="#"><img src="Image/homepage3.jpg" alt=""></a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-p">
+            <p>©2023 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+</html>
