@@ -31,7 +31,7 @@
 
         /* NAVBAR START */
 
-        header{
+        header {
             height: 10vh;
         }
 
@@ -77,12 +77,12 @@
             font-size: 18px;
         }
 
-        .navbar-list-item a{
+        .navbar-list-item a {
             text-decoration: none;
             color: #222;
         }
 
-        .navbar-list-item:hover a{
+        .navbar-list-item:hover a {
             color: #1ea2c3;
         }
 
@@ -206,7 +206,7 @@
             border-radius: 30px;
             border: 1px solid #22222249;
             background-color: rgb(229, 229, 229);
-            
+
         }
 
         .form-item-phone input::placeholder {
@@ -256,14 +256,37 @@
         }
 
         .btn-send {
-            width: 100px;
+            background-color: rgb(229, 229, 229);
             margin-top: 10px;
             border: 1px solid #22222249;
-            color: #222;
+            border-radius: 8px;
+            box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+            box-sizing: border-box;
+            color: #0f1111;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Amazon Ember", sans-serif;
+            font-size: 13px;
+            line-height: 29px;
+            padding: 0 10px 0 11px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            width: 100px;
         }
 
         .btn-send:hover {
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: rgba(201, 201, 201, 0.54);
+        }
+
+        .btn-send:focus {
+            border-color: rgb(138, 138, 138);
+            box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+            outline: 0;
         }
 
         /* MAIN END */
@@ -287,27 +310,27 @@
         /* RESPONSIVE */
 
         @media screen and (max-width:1300px) {
-            .contact-section{
+            .contact-section {
                 margin-left: 20px;
                 max-height: 400px;
             }
 
-            .form{
+            .form {
                 margin-left: 20px;
-                
+
             }
         }
 
         @media screen and (max-width:576px) {
-            .social-media{
+            .social-media {
                 order: 2;
-            }          
+            }
 
-            .navbar-list{
+            .navbar-list {
                 order: 1;
             }
 
-            .navbar{
+            .navbar {
                 margin-top: 10px;
                 display: flex;
                 flex-direction: column;
@@ -316,41 +339,40 @@
         }
 
         @media screen and (max-width:520px) {
-            .dot{
+            .dot {
                 animation: none;
                 position: unset;
             }
 
-            .contact-title{
+            .contact-title {
                 font-size: 100px;
             }
         }
 
         @media screen and (max-width:400px) {
-            .navbar-list li{
+            .navbar-list li {
                 padding: 5px;
             }
 
-            .form{
+            .form {
                 max-width: 400px;
                 height: 700px;
             }
 
-            .form-first-section{
+            .form-first-section {
                 display: block;
             }
 
-            .form-second-section{
+            .form-second-section {
                 display: block;
             }
 
-            .form-item-message textarea{
+            .form-item-message textarea {
                 width: 200px;
                 height: 200px;
             }
 
         }
-
     </style>
 
 
@@ -358,8 +380,10 @@
 
 </head>
 
-<header>
-    <nav class="navbar">
+<body>
+
+    <header>
+        <nav class="navbar">
             <div class="social-media">
                 <ul class="social-media-list">
                     <li><a href="#">GH</a></li>
@@ -378,10 +402,10 @@
             </div>
 
 
-    </nav>
-</header>  
+        </nav>
+    </header>
 
-<body>
+
     <main class="main-section">
         <div class="contact-section">
             <h2 class="contact-title">Hello<span class="dot">.</span></h2>
@@ -433,7 +457,7 @@
             </div>
 
 
-            <button class="btn-send" type="submit">Send</button>
+            <button class="btn-send" role="button">Send</button>
 
 
         </div>
